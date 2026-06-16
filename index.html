@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TDE 2 React</title>
+    <title>Dungeon Escape</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="game-page">
+      <div id="canvas-holder" aria-label="Jogo Dungeon Escape"></div>
+      <p class="helper-text">
+        Use WASD ou as setas para mover. Clique nos botões do menu para navegar.
+      </p>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
+    <script vite-ignore src="sketch.js"></script>
   </body>
 </html>

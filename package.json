@@ -1,18 +1,14 @@
 {
-  "name": "tde2-react-router-layout",
+  "name": "dungeon-escape",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host 127.0.0.1"
   },
-  "dependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.0.0",
+  "devDependencies": {
     "vite": "^7.0.0"
   }
 }

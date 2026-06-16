@@ -1,44 +1,42 @@
-# TDE 2 - Navegação e Layout de Aplicação React
-
-## Objetivo
-
-Projeto simples de uma SPA em React criado para atender ao TDE 2. A aplicação usa React Router, layout reutilizável e componentes.
+# Dungeon Escape
 
 ## Integrantes
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
+- João Vitor Lima Cecilio
+- Bárbara Franco
 
-## Páginas implementadas
+## Descrição
 
-- Home: apresentação da aplicação.
-- Sobre: explicação do projeto.
-- Lista: lista de páginas usando o componente `Card`.
-- Contato: formulário visual de contato.
+Jogo de exploração em masmorra desenvolvido em JavaScript com p5.js para o projeto final da disciplina Web Development: HTML5 Canvas & Games.
 
-## Arquitetura
+O jogador controla um personagem preso em uma dungeon. O objetivo é pegar a chave, evitar inimigos e armadilhas, abrir a porta e escapar por 3 fases.
 
-A aplicação é organizada em camadas simples:
+## Como jogar
 
-- `src/main.jsx`: ponto de entrada do React.
-- `src/App.jsx`: renderiza o conjunto de rotas.
-- `src/routes/AppRoutes.jsx`: configura o `BrowserRouter`, as páginas e o layout principal.
-- `src/components/Layout.jsx`: define a estrutura comum com header, navbar, área de conteúdo e footer.
-- `src/components/Navbar.jsx`: menu de navegação da SPA.
-- `src/components/Footer.jsx`: rodapé reutilizável.
-- `src/components/Card.jsx`: componente reutilizável para os itens da Home e da Lista.
-- `src/pages`: telas acessadas pelas rotas.
+- WASD ou setas para mover.
+- Espaço para pausar ou continuar o jogo.
+- Pegue a chave para liberar a porta.
+- Evite inimigos e armadilhas.
+- Vá até a porta depois de pegar a chave para avançar de fase.
+- O jogo começa com 3 vidas.
 
-## Tecnologias
+## Controles
 
-- React
-- React Router DOM
-- Vite
-- JavaScript
-- CSS
+- WASD ou setas: mover personagem.
+- Espaço: pausar/continuar jogo.
 
-## Como rodar
+## Pontuação
+
+- +100 pontos ao pegar a chave.
+- +300 pontos ao completar uma fase.
+- Bônus por tempo restante ao escapar.
+- Ao tomar dano, o jogador perde vida, perde pontos e fica invencível por 1 segundo.
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador.
+
+Também é possível usar Live Server no VS Code ou o servidor local do Vite:
 
 ```bash
 npm install
@@ -52,36 +50,49 @@ npm.cmd install
 npm.cmd run dev
 ```
 
-Depois, acesse o endereço exibido pelo Vite no terminal.
+Depois, acesse o endereço exibido no terminal.
 
-## Estrutura de pastas
+## Assets
+
+- `assets/dungeon_theme.mp3`: trilha sonora de gameplay em estilo dungeon medieval.
+
+## Tecnologias
+
+- HTML
+- CSS
+- JavaScript
+- p5.js
+
+## Estrutura
 
 ```text
-src/
-├── components/
-│   ├── Card.jsx
-│   ├── Footer.jsx
-│   ├── Layout.jsx
-│   └── Navbar.jsx
-├── pages/
-│   ├── Contato.jsx
-│   ├── Home.jsx
-│   ├── Lista.jsx
-│   └── Sobre.jsx
-├── routes/
-│   └── AppRoutes.jsx
-├── App.jsx
-├── main.jsx
-└── styles.css
+/
+├── index.html
+├── style.css
+├── sketch.js
+├── README.md
+└── assets/
+    ├── player.png
+    ├── enemy.png
+    ├── key.png
+    ├── door.png
+    ├── wall.png
+    ├── floor.png
+    ├── trap.png
+    ├── dungeon_theme.mp3
+    ├── collect.wav
+    ├── damage.wav
+    ├── win.wav
+    └── gameover.wav
 ```
 
-## Como demonstrar a navegação no vídeo
+## Onde explicar o código no vídeo
 
-1. Abra a aplicação no navegador.
-2. Clique nas opções da navbar: Home, Sobre, Lista e Contato.
-3. Mostre que o conteúdo muda sem recarregar a página inteira.
-4. Mostre a Lista usando cards e o formulário da página Contato.
+- Os mapas ficam no array `levels`, dentro de `sketch.js`.
+- A movimentação e a colisão do jogador ficam na classe `Player`.
+- Inimigos, chave, porta e armadilhas ficam nas classes `Enemy`, `Item`, `Door` e `Trap`.
+- A troca de telas, pontuação, vidas e progressão ficam na classe `GameManager`.
 
-## Observações
+## Vídeo
 
-Esta versão não possui backend, banco de dados, login ou autenticação. O foco do TDE é a base estrutural da SPA: rotas, layout principal e componentes reutilizáveis.
+Adicionar depois o link do vídeo no YouTube.
