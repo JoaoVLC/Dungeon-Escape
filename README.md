@@ -94,5 +94,4 @@ Depois, acesse o endereço exibido no terminal.
 - A troca de telas, pontuação, vidas e progressão ficam na classe `GameManager`.
 
 ## Vídeo
-
-Adicionar depois o link do vídeo no YouTube.
+https://www.youtube.com/watch?v=m2leMUNl80g
